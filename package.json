@@ -1,6 +1,7 @@
 {
   "name": "gulp-demo",
   "version": "0.1.0",
+  "author": "zhang-glitch",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

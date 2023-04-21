@@ -3467,8 +3467,8 @@ gulp-sass@^5.1.0:
 
 gulp-swig@^0.9.1:
   version "0.9.1"
-  resolved "https://registry.npm.taobao.org/gulp-swig/download/gulp-swig-0.9.1.tgz#2db6cfd20fd194084a1d1d9d1b54e53f957875f0"
-  integrity sha1-LbbP0g/RlAhKHR2dG1TlP5V4dfA=
+  resolved "https://registry.yarnpkg.com/gulp-swig/-/gulp-swig-0.9.1.tgz#2db6cfd20fd194084a1d1d9d1b54e53f957875f0"
+  integrity sha512-hgSDspy/4v+9sKlDI4sVgexX8am0K0kd+N0+xYQ+9nfSF6rQN1BGkUdmMcvrex2NaKAKWk+9uJhE/9v9fkciuw==
   dependencies:
     clone "~2.1.2"
     event-stream "~4.0.1"
