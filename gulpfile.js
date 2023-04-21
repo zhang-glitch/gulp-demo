@@ -6,7 +6,8 @@ const sass = require('gulp-sass')(require('sass'));
 const babel = require("gulp-babel")
 // gulp-swig处理swig模板语法
 const swig = require("gulp-swig")
-
+// gulp-imagemin处理图片,我们需要安装6.1.0版本，否则模块化不兼容
+const imagemin = require("gulp-imagemin")
 
 const data = {
   menus: [
@@ -63,12 +64,25 @@ const page = () => {
   return src("src/**/*.html", {base: "src"}).pipe(swig({data})).pipe(dest("dist"))
 }
 
+// 无损压缩
+const image = () => {
+  return src("src/assets/images/**", {base: "src"}).pipe(imagemin()).pipe(dest("dist"))
+}
+// 无损压缩
+const font = () => {
+  return src("src/assets/fonts/**", {base: "src"}).pipe(imagemin()).pipe(dest("dist"))
+}
+
+const extra = () => {
+  return src("public/**", {base: "public"}).pipe(dest("dist"))
+}
 // 并行处理js,css,html文件
-const compile = parallel(style, script, page)
+const compile = parallel(style, script, page, image, font, extra)
 
 module.exports = {
   style,
   script,
   page,
+  image,
   compile
 }
