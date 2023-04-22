@@ -138,7 +138,7 @@ const useref = () => {
 }
 // 并行处理js,css,html文件
 const compile = parallel(style, script, page)
-
+// 构建，【删除，编译html,js,css,处理依赖引入，压缩代码】【其他资源处理】
 const build = series(clean, parallel(series(compile, useref), image, font, extra))
 
 const dev = series(clean, compile, server)
